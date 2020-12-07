@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate
 @Service
 class PokemonRestService(private val restTemplate: RestTemplate) {
 
-    val base: String = "https://pokeapi.co/api/v2"
+    private val base: String = "https://pokeapi.co/api/v2"
 
     fun getCharacteristics(request: PokemonCharacteristicsServiceRequest): PokemonCharacteristicsServiceResponse? {
         return try {

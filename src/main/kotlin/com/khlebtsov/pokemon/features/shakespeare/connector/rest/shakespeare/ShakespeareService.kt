@@ -5,7 +5,7 @@ import org.springframework.web.client.RestTemplate
 
 @Service
 class ShakespeareService(private val restTemplate: RestTemplate) {
-    val base: String = "https://api.funtranslations.com"
+    private val base: String = "https://api.funtranslations.com"
 
     fun translate(request: TranslateRequest): TranslateResponse {
         return restTemplate.postForEntity(
