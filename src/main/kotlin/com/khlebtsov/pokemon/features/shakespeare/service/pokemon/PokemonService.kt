@@ -1,11 +1,11 @@
 package com.khlebtsov.pokemon.features.shakespeare.service.internal
 
+import com.khlebtsov.pokemon.features.shakespeare.connector.rest.pokemon.GetPokemonRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.rest.pokemon.PokemonCharacteristicsServiceRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.rest.pokemon.PokemonRestService
 import com.khlebtsov.pokemon.features.shakespeare.model.Description
 import com.khlebtsov.pokemon.features.shakespeare.model.Pokemon
-import com.khlebtsov.pokemon.features.shakespeare.service.internal.pokemon.FindPokemonDescriptionRequest
-import com.khlebtsov.pokemon.features.shakespeare.service.rest.pokemon.GetPokemonRequest
-import com.khlebtsov.pokemon.features.shakespeare.service.rest.pokemon.PokemonCharacteristicsServiceRequest
-import com.khlebtsov.pokemon.features.shakespeare.service.rest.pokemon.PokemonRestService
+import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.FindPokemonDescriptionRequest
 import org.springframework.stereotype.Service
 
 

@@ -1,4 +1,4 @@
-package com.khlebtsov.pokemon.features.shakespeare.service.internal.pokemon
+package com.khlebtsov.pokemon.features.shakespeare.service.pokemon
 
 import com.khlebtsov.pokemon.features.shakespeare.model.Pokemon
 

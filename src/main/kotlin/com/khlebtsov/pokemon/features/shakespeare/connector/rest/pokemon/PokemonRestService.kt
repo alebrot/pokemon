@@ -1,4 +1,4 @@
-package com.khlebtsov.pokemon.features.shakespeare.service.rest.pokemon
+package com.khlebtsov.pokemon.features.shakespeare.connector.rest.pokemon
 
 import org.springframework.stereotype.Service
 import org.springframework.web.client.HttpClientErrorException
