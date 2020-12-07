@@ -1,4 +1,4 @@
-package com.khlebtsov.pokemon.features.shakespeare.connector.rest.shakespeare
+package com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare
 
 
 data class SuccessDto(val total: Int)
