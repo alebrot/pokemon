@@ -1,4 +1,4 @@
-package com.khlebtsov.pokemon.features.shakespeare.connector.rest.pokemon
+package com.khlebtsov.pokemon.features.shakespeare.connector.pokemon
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

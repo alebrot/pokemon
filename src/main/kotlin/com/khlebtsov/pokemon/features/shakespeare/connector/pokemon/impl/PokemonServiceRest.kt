@@ -1,4 +1,4 @@
-package com.khlebtsov.pokemon.features.shakespeare.connector.rest.pokemon
+package com.khlebtsov.pokemon.features.shakespeare.connector.pokemon
 
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod
@@ -8,13 +8,9 @@ import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import java.net.URI
 
-interface PokemonRestService {
-    fun getCharacteristics(request: PokemonCharacteristicsServiceRequest): PokemonCharacteristicsServiceResponse?
-    fun getPokemon(request: GetPokemonRequest): GetPokemonResponse?
-}
 
 @Service
-class PokemonRestServiceDefault(private val restTemplate: RestTemplate) : PokemonRestService {
+class PokemonServiceDefault(private val restTemplate: RestTemplate) : PokemonService {
 
     private val base: String = "https://pokeapi.co/api/v2"
 
