@@ -1,8 +1,12 @@
 package com.khlebtsov.pokemon.features.shakespeare.connector.rest.pokemon
 
+import org.springframework.http.HttpHeaders
+import org.springframework.http.HttpMethod
+import org.springframework.http.RequestEntity
 import org.springframework.stereotype.Service
 import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
+import java.net.URI
 
 @Service
 class PokemonRestService(private val restTemplate: RestTemplate) {
@@ -11,9 +15,14 @@ class PokemonRestService(private val restTemplate: RestTemplate) {
 
     fun getCharacteristics(request: PokemonCharacteristicsServiceRequest): PokemonCharacteristicsServiceResponse? {
         return try {
-            restTemplate.getForEntity(
-                "$base/${request.id}/", PokemonCharacteristicsServiceResponse::class.java
-            ).body ?: throw IllegalStateException("Unexpected result, body is null")
+            val requestEntity =
+                RequestEntity<Void>(
+                    getRequiredHeaders(),
+                    HttpMethod.GET,
+                    URI.create("$base/characteristic/${request.id}/")
+                )
+            restTemplate.exchange(requestEntity, PokemonCharacteristicsServiceResponse::class.java).body
+                ?: throw IllegalStateException("Unexpected result, body is null")
         } catch (notFoundException: HttpClientErrorException.NotFound) {
             null
         }
@@ -21,11 +30,19 @@ class PokemonRestService(private val restTemplate: RestTemplate) {
 
     fun getPokemon(request: GetPokemonRequest): GetPokemonResponse? {
         return try {
-            restTemplate.getForEntity(
-                "$base/pokemon/${request.name}/", GetPokemonResponse::class.java
-            ).body ?: throw IllegalStateException("Unexpected result, body is null")
+            val requestEntity =
+                RequestEntity<Void>(getRequiredHeaders(), HttpMethod.GET, URI.create("$base/pokemon/${request.name}/"))
+            restTemplate.exchange(requestEntity, GetPokemonResponse::class.java).body
+                ?: throw IllegalStateException("Unexpected result, body is null")
         } catch (notFoundException: HttpClientErrorException.NotFound) {
             null
         }
+    }
+
+
+    private fun getRequiredHeaders(): HttpHeaders {
+        val headers = HttpHeaders()
+        headers.set("User-Agent", "Mozilla/5.0")
+        return headers
     }
 }
