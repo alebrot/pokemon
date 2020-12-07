@@ -8,12 +8,17 @@ import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import java.net.URI
 
+interface PokemonRestService {
+    fun getCharacteristics(request: PokemonCharacteristicsServiceRequest): PokemonCharacteristicsServiceResponse?
+    fun getPokemon(request: GetPokemonRequest): GetPokemonResponse?
+}
+
 @Service
-class PokemonRestService(private val restTemplate: RestTemplate) {
+class PokemonRestServiceDefault(private val restTemplate: RestTemplate) : PokemonRestService {
 
     private val base: String = "https://pokeapi.co/api/v2"
 
-    fun getCharacteristics(request: PokemonCharacteristicsServiceRequest): PokemonCharacteristicsServiceResponse? {
+    override fun getCharacteristics(request: PokemonCharacteristicsServiceRequest): PokemonCharacteristicsServiceResponse? {
         return try {
             val requestEntity =
                 RequestEntity<Void>(
@@ -28,7 +33,7 @@ class PokemonRestService(private val restTemplate: RestTemplate) {
         }
     }
 
-    fun getPokemon(request: GetPokemonRequest): GetPokemonResponse? {
+    override fun getPokemon(request: GetPokemonRequest): GetPokemonResponse? {
         return try {
             val requestEntity =
                 RequestEntity<Void>(getRequiredHeaders(), HttpMethod.GET, URI.create("$base/pokemon/${request.name}/"))
