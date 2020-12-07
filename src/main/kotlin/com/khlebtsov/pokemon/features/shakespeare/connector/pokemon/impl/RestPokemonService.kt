@@ -14,7 +14,7 @@ import java.net.URI
 class RestPokemonService(
     private val restTemplate: RestTemplate,
     private val properties: RestPokemonServiceProperties
-) : PokemonConnectorService {
+) : PokemonService {
     override fun getCharacteristics(request: PokemonCharacteristicsServiceRequest): PokemonCharacteristicsServiceResponse? {
         return try {
             val requestEntity =
