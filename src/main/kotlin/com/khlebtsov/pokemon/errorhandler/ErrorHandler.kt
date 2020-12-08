@@ -21,7 +21,7 @@ class ErrorHandler(private val errorResponseFactory: ErrorResponseFactory) {
     }
 
     @ExceptionHandler(HttpClientErrorException::class)
-    fun handleResponseStatusException(ex: HttpClientErrorException): ResponseEntity<Any> {
+    fun handleHttpClientErrorException(ex: HttpClientErrorException): ResponseEntity<Any> {
         log(ex)
         return ResponseEntity(errorResponseFactory.create(ex), ex.statusCode)
     }
