@@ -60,7 +60,7 @@ internal class ShakespeareControllerDefaultTest : ControllerTest() {
     }
 
     @Test
-    fun retriveShakespeareDescription404() {
+    fun retriveShakespeareAndFindByNameReturnsNull() {
         //given
         val name = "pokemonName"
 
@@ -84,6 +84,41 @@ internal class ShakespeareControllerDefaultTest : ControllerTest() {
 
         Mockito.verify(pokemonService).findByName(name)
         Mockito.verifyNoMoreInteractions(pokemonService)
+        Mockito.verifyNoInteractions(translatorService)
+    }
+
+
+    @Test
+    fun retriveShakespeareAndDescriptionReturnsNull() {
+        //given
+        val name = "pokemonName"
+        val id = 1
+        val pokemon = Pokemon(id, name)
+        val languageIso = "en"
+        val request = FindPokemonDescriptionRequest(pokemon, languageIso)
+
+        //mock
+        Mockito.`when`(pokemonService.findByName(name)).thenReturn(pokemon)
+        Mockito.`when`(pokemonService.findPokemonDescription(request))
+            .thenReturn(null)
+        //run
+        val mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(URI.create("/pokemon/$name")))
+            .andExpect(status().isNotFound)
+            .andReturn()
+
+        //assert
+        val response = objectMapper.readValue(
+            mvcResult.response.contentAsString,
+            ErrorResponse::class.java
+        )
+        Assertions.assertNotNull(response)
+        Assertions.assertEquals(
+            "Something went wrong, please check log or enable displayErrorsToCaller",
+            response.message
+        )
+
+        Mockito.verify(pokemonService).findByName(name)
+        Mockito.verify(pokemonService).findPokemonDescription(request)
         Mockito.verifyNoInteractions(translatorService)
     }
 }
