@@ -23,7 +23,7 @@ class RetrievePokemonServiceImpl(private val pokemonService: PokemonService) : R
         return pokemonService.getCharacteristics(PokemonCharacteristicsServiceRequest(id))
             ?.let {
                 it.descriptions.firstOrNull { descriptionDto -> languageIso == descriptionDto.language.name }
-                    ?.let { descriptionDto -> Description(descriptionDto.language.name) }
+                    ?.let { descriptionDto -> Description(descriptionDto.description) }
             }
     }
 }
