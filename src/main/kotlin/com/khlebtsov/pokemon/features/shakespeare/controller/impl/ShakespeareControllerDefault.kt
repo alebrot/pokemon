@@ -3,8 +3,8 @@ package com.khlebtsov.pokemon.features.shakespeare.controller.impl
 import com.khlebtsov.pokemon.features.shakespeare.controller.ShakespeareController
 import com.khlebtsov.pokemon.features.shakespeare.controller.dto.RetriveShakespeareDescriptionResponse
 import com.khlebtsov.pokemon.features.shakespeare.model.Pokemon
-import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.FindPokemonDescriptionRequest
 import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.RetrievePokemonService
+import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.dto.FindPokemonDescriptionRequest
 import com.khlebtsov.pokemon.features.shakespeare.service.translator.TranslatorService
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.GetMapping

@@ -1,7 +1,7 @@
 package com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.impl
 
 import base.ServiceTest
-import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.*
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.*
 import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.impl.properties.RestPokemonServiceProperties
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

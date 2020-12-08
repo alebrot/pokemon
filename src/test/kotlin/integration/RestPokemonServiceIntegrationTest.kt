@@ -1,7 +1,7 @@
 package integration
 
-import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.GetPokemonRequest
-import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.PokemonCharacteristicsServiceRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.GetPokemonRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.PokemonCharacteristicsServiceRequest
 import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.impl.RestPokemonService
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull

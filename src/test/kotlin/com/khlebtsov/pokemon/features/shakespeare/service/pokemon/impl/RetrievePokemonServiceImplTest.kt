@@ -1,9 +1,10 @@
 package com.khlebtsov.pokemon.features.shakespeare.service.pokemon.impl
 
 import base.ServiceTest
-import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.*
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.PokemonService
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.*
 import com.khlebtsov.pokemon.features.shakespeare.model.Pokemon
-import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.FindPokemonDescriptionRequest
+import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.dto.FindPokemonDescriptionRequest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.fail

@@ -1,7 +1,7 @@
 package integration
 
-import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.TranslateRequest
 import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.RestShakespeareService
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.TranslateRequest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test

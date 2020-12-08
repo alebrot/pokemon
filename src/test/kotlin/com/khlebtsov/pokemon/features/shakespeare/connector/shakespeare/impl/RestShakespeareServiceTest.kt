@@ -1,10 +1,10 @@
 package com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl
 
 import base.ServiceTest
-import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.ContentsDto
-import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.SuccessDto
-import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.TranslateRequest
-import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.TranslateResponse
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.ContentsDto
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.SuccessDto
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.TranslateRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.TranslateResponse
 import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.properties.RestShakespeareServiceProperties
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

@@ -1,7 +1,11 @@
 package com.khlebtsov.pokemon.features.shakespeare.service.translator.impl
 
 import base.ServiceTest
-import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.*
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.ShakespeareService
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.ContentsDto
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.SuccessDto
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.TranslateRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.TranslateResponse
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.fail

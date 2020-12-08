@@ -1,6 +1,10 @@
 package com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.impl
 
-import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.*
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.PokemonService
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.GetPokemonRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.GetPokemonResponse
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.PokemonCharacteristicsServiceRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.dto.PokemonCharacteristicsServiceResponse
 import com.khlebtsov.pokemon.features.shakespeare.connector.pokemon.impl.properties.RestPokemonServiceProperties
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod

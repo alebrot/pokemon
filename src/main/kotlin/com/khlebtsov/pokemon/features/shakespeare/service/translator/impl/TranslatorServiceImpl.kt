@@ -1,7 +1,7 @@
 package com.khlebtsov.pokemon.features.shakespeare.service.translator.impl
 
 import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.ShakespeareService
-import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.TranslateRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.dto.TranslateRequest
 import com.khlebtsov.pokemon.features.shakespeare.service.translator.TranslatorService
 import org.springframework.stereotype.Service
 

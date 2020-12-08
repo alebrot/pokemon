@@ -5,8 +5,8 @@ import com.khlebtsov.pokemon.errorhandler.ErrorResponse
 import com.khlebtsov.pokemon.features.shakespeare.controller.dto.RetriveShakespeareDescriptionResponse
 import com.khlebtsov.pokemon.features.shakespeare.model.Description
 import com.khlebtsov.pokemon.features.shakespeare.model.Pokemon
-import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.FindPokemonDescriptionRequest
 import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.RetrievePokemonService
+import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.dto.FindPokemonDescriptionRequest
 import com.khlebtsov.pokemon.features.shakespeare.service.translator.TranslatorService
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
