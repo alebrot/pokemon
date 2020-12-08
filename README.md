@@ -33,6 +33,9 @@ There are 3 options:
 
 ### Further improvements
 
+- add code to errore response
+- add parsing of errors from external API calls and extract code and message
+- add custom exception to communicate to frontend functional errors(like exceeding call limits, etc)
 - add logging implemented with AspectJ, to log automatically every request and response for all layers.
 - extract code from the controller and put it in a facade.
 - controller will be responsible only for converting dto to model(using factory), executing facade code and assembling
