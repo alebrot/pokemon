@@ -1,6 +1,9 @@
-package com.khlebtsov.pokemon.features.shakespeare.connector.rest.shakespeare
+package integration
 
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.TranslateRequest
+import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl.RestShakespeareService
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -8,9 +11,10 @@ import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.web.client.RestTemplate
 
+@Disabled
 @ExtendWith(value = [SpringExtension::class])
-@ContextConfiguration(classes = [ShakespeareService::class, RestTemplate::class])
-internal class ShakespeareServiceTest(@Autowired private val toTest: ShakespeareService) {
+@ContextConfiguration(classes = [RestShakespeareService::class, RestTemplate::class])
+internal class RestShakespeareServiceIntegrationTest(@Autowired private val toTest: RestShakespeareService) {
     @Test
     fun translate() {
         val text = "Hello world"

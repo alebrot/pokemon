@@ -10,7 +10,7 @@ data class DescriptionDto(val description: String, val language: LanguageDto)
 
 data class PokemonCharacteristicsServiceRequest(val id: Int)
 data class PokemonCharacteristicsServiceResponse(
-    val id: String,
+    val id: Int,
     @JsonProperty("gene_modulo") val geneModulo: Int,
     @JsonProperty("possible_values") val possibleValues: List<Int>,
     @JsonProperty("highest_stat") val highestStat: HighestStatDto,
