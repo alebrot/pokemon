@@ -1,6 +1,6 @@
 package com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.impl
 
-import com.khlebtsov.pokemon.ServiceTest
+import base.ServiceTest
 import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.ContentsDto
 import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.SuccessDto
 import com.khlebtsov.pokemon.features.shakespeare.connector.shakespeare.TranslateRequest

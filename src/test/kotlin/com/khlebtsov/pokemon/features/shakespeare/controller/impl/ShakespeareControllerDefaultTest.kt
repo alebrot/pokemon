@@ -1,6 +1,6 @@
 package com.khlebtsov.pokemon.features.shakespeare.controller.impl
 
-import com.khlebtsov.pokemon.PokemonApplicationTests
+import base.ControllerTest
 import com.khlebtsov.pokemon.errorhandler.ErrorResponse
 import com.khlebtsov.pokemon.features.shakespeare.controller.dto.RetriveShakespeareDescriptionResponse
 import com.khlebtsov.pokemon.features.shakespeare.model.Description
@@ -10,18 +10,13 @@ import com.khlebtsov.pokemon.features.shakespeare.service.pokemon.RetrievePokemo
 import com.khlebtsov.pokemon.features.shakespeare.service.translator.TranslatorService
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.Mockito
 import org.springframework.boot.test.mock.mockito.MockBean
-import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import java.net.URI
 
-@ExtendWith(value = [SpringExtension::class])
-internal class ShakespeareControllerDefaultTest : PokemonApplicationTests(
-
-) {
+internal class ShakespeareControllerDefaultTest : ControllerTest() {
 
     @MockBean
     private lateinit var pokemonService: RetrievePokemonService
