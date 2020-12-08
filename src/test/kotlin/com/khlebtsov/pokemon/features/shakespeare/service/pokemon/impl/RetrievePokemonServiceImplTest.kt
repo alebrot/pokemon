@@ -41,6 +41,19 @@ internal class RetrievePokemonServiceImplTest : ServiceTest() {
     }
 
     @Test
+    fun findByNameNotFound() {
+        //given
+        val name = "name"
+        val getPokemonRequest = GetPokemonRequest(name)
+        Mockito.`when`(pokemonService.getPokemon(getPokemonRequest)).thenReturn(null)
+        //run
+        val result = toTest.findByName(name)
+        //verify
+        Assertions.assertNull(result)
+        Mockito.verify(pokemonService).getPokemon(getPokemonRequest)
+    }
+
+    @Test
     fun findByNamePropagatesException() {
         // given
         val name = "name"
