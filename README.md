@@ -25,7 +25,8 @@ There are 3 options:
 - 2 services (will use connectors and remap dtos returned by them to models that go through the application layers,
   models will have only necessary information for the application)
 - one controller GET /pokemon/{name}, (the controller invokes services)
-- simple error handling
+- simple error handling. displayErrorsToCaller allows propagating external error to caller or show only the default
+  message
 - unit test with jUnit5 e Mockito for all public methods
 - feature based package structure (only one for now)
 - run & build shell scripts
