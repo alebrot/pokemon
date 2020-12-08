@@ -48,6 +48,10 @@ There are 3 options:
 - add docker compose
 - environment files to store passwords(for unlimited access to external API)
 
+## Code Coverage
+
+![Screenshot](coverage.png)
+
 ## P.S.
 
 - Added 2 integration tests that actually call external services, used during development. Marked as @Disabled to avoid
